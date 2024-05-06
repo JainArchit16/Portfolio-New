@@ -1,14 +1,23 @@
 import React from "react";
-import reactImg from "../assets/images/skills/react.webp";
-import svelteImg from "../assets/images/skills/svelte.webp";
-import typescriptImg from "../assets/images/skills/typescript.webp";
-import accessibilityImg from "../assets/images/skills/a11y.webp";
-import shellImg from "../assets/images/skills/shell.webp";
-import nextJsImg from "../assets/images/skills/next-js.webp";
-import graphqlImg from "../assets/images/skills/graphql.webp";
-import gitImg from "../assets/images/skills/git.webp";
-import cssImg from "../assets/images/skills/html.webp";
-import jsImg from "../assets/images/skills/js.webp";
+
+import cssImage from "../assets/images/skills/CSS.png";
+import javascriptImage from "../assets/images/skills/Javascript.svg";
+import expressImage from "../assets/images/skills/Express.png";
+
+import tailwindImage from "../assets/images/skills/Tailwind.png";
+import nodejsImage from "../assets/images/skills/NodeJs.svg";
+import mongodbImage from "../assets/images/skills/MongoDB.svg";
+import reduxImage from "../assets/images/skills/Redux.svg";
+import vercelImage from "../assets/images/skills/Vercel.svg";
+
+import htmlImage from "../assets/images/skills/HTML.png";
+
+import reactImage from "../assets/images/skills/React.png";
+
+import bootstrapImage from "../assets/images/skills/Bootstrap.svg";
+import materialUIImage from "../assets/images/skills/MaterialUI.svg";
+import gitImage from "../assets/images/skills/Git.svg";
+import githubImage from "../assets/images/skills/Github.svg";
 
 const Skills = () => {
   return (
@@ -18,75 +27,56 @@ const Skills = () => {
           My Toolkit
         </h2>
         <div className="skills-imgs">
+          <img src={htmlImage} alt="" className="skills-img" loading="lazy" />
+          <img src={cssImage} alt="" className="skills-img" loading="lazy" />
           <img
-            src={reactImg}
-            alt="React"
+            src={javascriptImage}
+            alt=""
             className="skills-img"
             loading="lazy"
-            title="React"
+          />
+          <img src={reactImage} alt="" className="skills-img" loading="lazy" />
+          <img src={nodejsImage} alt="" className="skills-img" loading="lazy" />
+
+          <img src={reduxImage} alt="" className="skills-img" loading="lazy" />
+          <img
+            src={tailwindImage}
+            alt=""
+            className="skills-img"
+            loading="lazy"
           />
           <img
-            src={svelteImg}
-            alt="Svelte"
+            src={bootstrapImage}
+            alt=""
             className="skills-img"
             loading="lazy"
-            title="Svelte"
           />
           <img
-            src={typescriptImg}
-            alt="Typescript"
+            src={materialUIImage}
+            alt=""
             className="skills-img"
             loading="lazy"
-            title="Typescript"
           />
           <img
-            src={accessibilityImg}
-            alt="Accessibility"
+            src={expressImage}
+            alt=""
             className="skills-img"
             loading="lazy"
-            title="Web Accessibility"
           />
+          <img src={gitImage} alt="" className="skills-img" loading="lazy" />
+          <img src={githubImage} alt="" className="skills-img" loading="lazy" />
+
           <img
-            src={shellImg}
-            alt="Shell"
+            src={mongodbImage}
+            alt=""
             className="skills-img"
             loading="lazy"
-            title="Shell"
           />
+          <img src={vercelImage} alt="" className="skills-img" loading="lazy" />
           <img
-            src={nextJsImg}
-            alt="NextJS"
+            src="https://www.svgrepo.com/show/353735/firebase.svg"
             className="skills-img"
             loading="lazy"
-            title="NextJS"
-          />
-          <img
-            src={graphqlImg}
-            alt="Graph Ql"
-            className="skills-img"
-            loading="lazy"
-            title="Graph QL"
-          />
-          <img
-            src={gitImg}
-            alt="Git"
-            className="skills-img"
-            loading="lazy"
-            title="Git"
-          />
-          <img
-            src={cssImg}
-            alt="CSS"
-            className="skills-img"
-            loading="lazy"
-            title="CSS"
-          />
-          <img
-            src={jsImg}
-            alt="JavaScript"
-            className="skills-img"
-            loading="lazy"
-            title="JavaScript"
           />
         </div>
       </div>

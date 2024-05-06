@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import gitHub from "../assets/images/social-links/github.svg";
 import portfolioTemplateImg from "../assets/images/work/portfolio-template.webp";
 import agencyElevationImg from "../assets/images/work/agency-elevation.webp";
-import contributeDevImg from "../assets/images/work/contribute-dev.webp";
 
 function WorkSection() {
   const workElsRef = useRef([]);
@@ -48,25 +47,27 @@ function WorkSection() {
     <section className="work">
       <div className="container">
         <h2 className="h2" id="work">
-          Selected Work
+          Projects
         </h2>
         <div className="work-boxes">
           <div className="work-box" ref={(el) => workElsRef.current.push(el)}>
             <div className="work-textbox">
-              <h3 className="h3">portfolio template</h3>
+              <h3 className="h3">Study Notion</h3>
               <p className="work-text">
-                A free to use, minimal and accessible portfolio template for
-                developers.
+                It's a EdTech Platform which provide you with instructor as well
+                as student functionality.
               </p>
               <ol className="work-technologies">
                 <li>React</li>
-                <li>Gatsby</li>
-                <li>SCSS</li>
-                <li>MDX</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>MongoDB</li>
+                <li>ExpressJS</li>
+                <li>NodeJS</li>
               </ol>
               <div className="work-links">
                 <a
-                  href="https://github.com/devsyedmohsin"
+                  href="https://github.com/JainArchit16/Ed-Tech"
                   target="_blank"
                   rel="noopener"
                   className="link"
@@ -74,7 +75,7 @@ function WorkSection() {
                   Explore this project
                 </a>
                 <a
-                  href="https://github.com/devsyedmohsin"
+                  href="https://github.com/JainArchit16/Ed-Tech"
                   target="_blank"
                   rel="noopener"
                   title="Source code"
@@ -96,19 +97,31 @@ function WorkSection() {
           </div>
           <div className="work-box" ref={(el) => workElsRef.current.push(el)}>
             <div className="work-textbox">
-              <h3 className="h3">agencyelevation.com</h3>
-              <p className="work-text">Website for Agency Elevation.</p>
+              <h3 className="h3">SafePassage</h3>
+              <p className="work-text">
+                A platform to enhace highway security and provide instantaneous
+                help in case of road accidents
+              </p>
               <ol className="work-technologies">
                 <li>React</li>
-                <li>Gatsby</li>
-                <li>Material UI</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>MongoDB</li>
+                <li>ExpressJS</li>
+                <li>NodeJS</li>
+                <li>FireBase</li>
               </ol>
               <div className="work-links">
-                <a href="#" target="_blank" rel="noopener" className="link">
+                <a
+                  href="https://github.com/JainArchit16/SafePassageMain"
+                  target="_blank"
+                  rel="noopener"
+                  className="link"
+                >
                   Explore this project
                 </a>
                 <a
-                  href="http://github.com/devsyedmohsin"
+                  href="https://github.com/JainArchit16/SafePassageMain"
                   target="_blank"
                   rel="noopener"
                   title="Source code"
@@ -126,33 +139,6 @@ function WorkSection() {
                 src={agencyElevationImg}
                 alt="agency elevation"
               />
-            </picture>
-          </div>
-          <div className="work-box" ref={(el) => workElsRef.current.push(el)}>
-            <div className="work-textbox">
-              <h3 className="h3">contribute.dev</h3>
-              <p className="work-text">
-                Website for DevX A dedicated space for developer experience
-              </p>
-              <ol className="work-technologies">
-                <li>Ruby</li>
-                <li>SvelteKit</li>
-                <li>Emotion</li>
-              </ol>
-              <div className="work-links">
-                <a href="#" target="_blank" rel="noopener" className="link">
-                  Explore this project
-                </a>
-                <a href="#" target="_blank" rel="noopener" title="Source code">
-                  <img src={gitHub} alt="GitHub" loading="lazy" />
-                </a>
-              </div>
-            </div>
-            <picture
-              className="work-img"
-              ref={(el) => workImgsRef.current.push(el)}
-            >
-              <img loading="lazy" src={contributeDevImg} alt="contribute dev" />
             </picture>
           </div>
         </div>

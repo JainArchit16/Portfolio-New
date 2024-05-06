@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Client from "./components/Client";
 import WorkSection from "./components/WorkSection";
 import Skills from "./components/Skills";
-import Testimonials from "./components/Testimonials";
+// import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Typed from "typed.js";
@@ -72,19 +72,27 @@ export default function App() {
         <nav className={`nav ${navHidden ? "hidden" : ""}`}>
           <ol className="nav-items">
             <li className="nav-item">
-              <a href="#">Home</a>
+              <a href="#" onClick={toggleNav}>
+                Home
+              </a>
             </li>
             <li className="nav-item">
-              <a href="#work">My Work</a>
+              <a href="#work" onClick={toggleNav}>
+                My Work
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a href="#skills" onClick={toggleNav}>
+                My Skills
+              </a>
             </li>
             <li className="nav-item">
-              <a href="#blog">See Blog</a>
-            </li>
-            <li className="nav-item">
-              <a href="#skills">My Skills</a>
-            </li>
-            <li className="nav-item">
-              <a href="#contact" data-focused="last-focused">
+              <a
+                href="#contact"
+                data-focused="last-focused"
+                onClick={toggleNav}
+              >
                 Contact
               </a>
             </li>
@@ -122,7 +130,7 @@ export default function App() {
 
         <Skills />
 
-        <Testimonials />
+        {/* <Testimonials /> */}
 
         <Contact />
       </main>
