@@ -1,16 +1,16 @@
 import React, { useEffect, useRef } from "react";
-import stripeLogo from "../assets/images/trusted-by/stripe.svg";
-import datastaxLogo from "../assets/images/trusted-by/datastax.svg";
-import cokeLogo from "../assets/images/trusted-by/coke.svg";
-import gmLogo from "../assets/images/trusted-by/gm.svg";
-import sharesLogo from "../assets/images/trusted-by/shares.svg";
-import shopifyLogo from "../assets/images/trusted-by/shopify.svg";
-import agencyElevationLogo from "../assets/images/trusted-by/agency-elevation.svg";
-import gitlabLogo from "../assets/images/trusted-by/gitlab.svg";
-import duolingoLogo from "../assets/images/trusted-by/duolingo.svg";
-import coyoteLogo from "../assets/images/trusted-by/coyote.svg";
-import astratoLogo from "../assets/images/trusted-by/astrato.svg";
-import mercadoLogo from "../assets/images/trusted-by/mercado.svg";
+import stripeLogo from "../assets/images/trusted-by/html.png";
+import datastaxLogo from "../assets/images/trusted-by/github.png";
+import cokeLogo from "../assets/images/trusted-by/css3.svg";
+import gmLogo from "../assets/images/trusted-by/js.png";
+import sharesLogo from "../assets/images/trusted-by/Redux.svg";
+import shopifyLogo from "../assets/images/trusted-by/Bash.svg";
+import agencyElevationLogo from "../assets/images/trusted-by/Bootstrap.svg";
+import gitlabLogo from "../assets/images/trusted-by/Next.svg";
+import duolingoLogo from "../assets/images/trusted-by/NodeJs.svg";
+import coyoteLogo from "../assets/images/trusted-by/Express.png";
+import astratoLogo from "../assets/images/trusted-by/MaterialUI.svg";
+import mercadoLogo from "../assets/images/trusted-by/MongoDB.svg";
 
 function Client() {
   const logosWrappersRef = useRef([]);

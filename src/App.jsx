@@ -6,7 +6,6 @@ import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Type from "typed-js";
 import Typed from "typed.js";
 
 export default function App() {
