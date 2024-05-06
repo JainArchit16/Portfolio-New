@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gitHub from "../assets/images/social-links/github.svg";
-import portfolioTemplateImg from "../assets/images/work/portfolio-template.webp";
+import portfolioTemplateImg from "../assets/images/work/portfolio-template.png";
 import agencyElevationImg from "../assets/images/work/agency-elevation.webp";
 
 function WorkSection() {
