@@ -965,6 +965,14 @@ body.dark .work-links img {
   inline-size: 135px;
 }
 
+.skills-img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills-img:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 1100px) {
   .skills-img {
     block-size: 100px;
