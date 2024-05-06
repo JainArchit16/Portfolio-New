@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 import Client from "./components/Client";
 import WorkSection from "./components/WorkSection";
@@ -9,9 +9,6 @@ import Footer from "./components/Footer";
 
 export default function App() {
   const [navHidden, setNavHidden] = useState(true);
-  // const [theme, setTheme] = useState(
-  //   () => localStorage.getItem("theme") || "dark"
-  // );
 
   const toggleNav = () => {
     setNavHidden(!navHidden);
