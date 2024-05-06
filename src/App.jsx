@@ -6,9 +6,30 @@ import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Type from "typed-js";
+import Typed from "typed.js";
 
 export default function App() {
   const [navHidden, setNavHidden] = useState(true);
+
+  useEffect(() => {
+    const typeData = new Typed(".role", {
+      strings: [
+        "Full Stack Developer",
+        "Web Developer",
+        "Competitive Programmer",
+        "BlockChain Enthusiast",
+      ],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 75,
+      backDelay: 1500,
+    });
+
+    return () => {
+      typeData.destroy();
+    };
+  }, []);
 
   const toggleNav = () => {
     setNavHidden(!navHidden);
@@ -59,12 +80,14 @@ export default function App() {
         <div className="container">
           <div className="header-textbox">
             <h1 className="h1">
-              <span>Hi, I'm Syed Mohsin</span>
-              <span>Frontend Web Developer</span>
+              <span>Hi, I'm Archit Jain</span>
+              <div className="flex flex-row">
+                <span className="role"></span>
+              </div>
             </h1>
             <p className="header-text">
-              A frontend software engineer and interface designer who builds UX
-              rich accessible and performant websites.
+              I’m a web developer and here is my portfolio website. Here you’ll
+              learn about me as a web developer.
             </p>
             <div className="header-btns">
               <a href="#contact" className="btn btn-cta">

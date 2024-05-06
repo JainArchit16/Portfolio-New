@@ -39,7 +39,7 @@ function Client() {
   return (
     <section className="client">
       <div className="container">
-        <h2 className="h2">Trusted by</h2>
+        <h2 className="h2">Skill Set</h2>
         <div className="logos">
           <div
             className="logo-group"
