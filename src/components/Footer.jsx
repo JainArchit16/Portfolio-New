@@ -33,7 +33,7 @@ const Footer = () => {
               <li className="footer-link">
                 <a
                   title="GitHub"
-                  href="https://github.com/devsyedmohsin"
+                  href="https://github.com/JainArchit16"
                   target="_blank"
                   rel="noopener"
                 >
@@ -43,7 +43,7 @@ const Footer = () => {
               <li className="footer-link">
                 <a
                   title="Codepen"
-                  href="https://github.com/devsyedmohsin"
+                  href="https://github.com/JainArchit16"
                   target="_blank"
                   rel="noopener"
                 >
@@ -53,35 +53,16 @@ const Footer = () => {
               <li className="footer-link">
                 <a
                   title="Linkedin"
-                  href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/"
+                  href="https://www.linkedin.com/in/architjain16/"
                   target="_blank"
                   rel="noopener"
                 >
                   <img loading="lazy" src={linkedinLogo} alt="Linkedin" />
                 </a>
               </li>
-              <li className="footer-link">
-                <a
-                  title="Twitter"
-                  href="https://github.com/devsyedmohsin"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img loading="lazy" src={twitterLogo} alt="Twitter" />
-                </a>
-              </li>
             </ol>
           </nav>
-          <p className="footer-text">
-            &copy; <span>2024</span> - Template designed & developed by{" "}
-            <a
-              target="_blank"
-              rel="noopener"
-              href="https://github.com/devsyedmohsin"
-            >
-              Syed Mohsin.
-            </a>
-          </p>
+          {/*  */}
           <label className="theme-switch" htmlFor="theme-switch">
             <span>Dark Theme</span>
             <input

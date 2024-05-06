@@ -11,6 +11,34 @@ import Typed from "typed.js";
 export default function App() {
   const [navHidden, setNavHidden] = useState(true);
 
+  const toggleNav = () => {
+    setNavHidden(!navHidden);
+    document.body.classList.toggle("lock-screen");
+  };
+
+  // useEffect(() => {
+  //   document.body.addEventListener("keydown", (e) => {
+  //     if (e.key === "Escape" && navHidden == false) {
+  //       console.log("hello");
+  //       toggleNav();
+  //     }
+  //   });
+  // }, []);
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && navHidden === false) {
+        toggleNav();
+      }
+    };
+
+    document.body.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.removeEventListener("keydown", handleEscape);
+    };
+  }, [navHidden]);
+
   useEffect(() => {
     const typeData = new Typed(".role", {
       strings: [
@@ -28,19 +56,6 @@ export default function App() {
     return () => {
       typeData.destroy();
     };
-  }, []);
-
-  const toggleNav = () => {
-    setNavHidden(!navHidden);
-    document.body.classList.toggle("lock-screen");
-  };
-
-  useEffect(() => {
-    document.body.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && navHidden == false) {
-        toggleNav();
-      }
-    });
   }, []);
 
   return (
