@@ -51,7 +51,6 @@ const Contact = () => {
         </h2>
         <div className="contact-content">
           <div className="contact-textbox">
-            {/* Please comment this component if you're not available for hire */}
             {/* <strong href="#" className="hire-alert">
               <span className="indicator"></span>
               Available for hire
