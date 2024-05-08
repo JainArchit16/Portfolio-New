@@ -52,10 +52,10 @@ const Contact = () => {
         <div className="contact-content">
           <div className="contact-textbox">
             {/* Please comment this component if you're not available for hire */}
-            <strong href="#" className="hire-alert">
+            {/* <strong href="#" className="hire-alert">
               <span className="indicator"></span>
               Available for hire
-            </strong>
+            </strong> */}
             <p className="contact-text">
               As a Web Developer, I construct web interfaces and design systems
               with a special love for accessibility and the performance. I tend
