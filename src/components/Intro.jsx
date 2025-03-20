@@ -6,7 +6,6 @@ const Intro = () => {
     const typeData = new Typed(".role", {
       strings: [
         "Full Stack Developer",
-        "Web Developer",
         "Competitive Programmer",
         "BlockChain Enthusiast",
         "Freelancer"
