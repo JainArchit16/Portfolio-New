@@ -9,6 +9,7 @@ const Intro = () => {
         "Web Developer",
         "Competitive Programmer",
         "BlockChain Enthusiast",
+        "Freelancer"
       ],
       loop: true,
       typeSpeed: 100,
