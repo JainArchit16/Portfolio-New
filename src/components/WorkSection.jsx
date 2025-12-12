@@ -4,8 +4,8 @@ import React, { useEffect, useRef } from "react";
 // Note: Please update these imports with the actual screenshots of your new projects!
 import gitHubIcon from "../assets/images/social-links/github.svg";
 import teachifyImg from "../assets/images/work/portfolio-template.png"; // Replaced StudyNotion
-import nptelImg from "../assets/images/work/agency-elevation.png"; // Placeholder for Nptel Hub
-import safePassageImg from "../assets/images/work/portfolio-template.png"; // Placeholder for SafePassage
+import nptelImg from "../assets/images/work/nptel.png"; // Placeholder for Nptel Hub
+import safePassageImg from "../assets/images/work/agency-elevation.png"; // Placeholder for SafePassage
 
 const WorkSection = () => {
   const projectRefs = useRef([]);
@@ -20,8 +20,8 @@ const WorkSection = () => {
         "Engineered a performance-analysis platform for NPTEL quizzes supporting 500+ active users. Implemented real-time analytics and detailed progress reports using a scalable relational database.",
       tech: ["Next.js", "PostgreSQL", "NextAuth.js", "TailwindCSS"],
       image: nptelImg,
-      githubLink: "https://github.com/JainArchit16", // Update this
-      liveLink: "#",
+      githubLink: "https://github.com/JainArchit16/Nptel-Website", // Update this
+      liveLink: "https://nptelhub.vercel.app/",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const WorkSection = () => {
       tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Razorpay"],
       image: teachifyImg,
       githubLink: "https://github.com/JainArchit16/Ed-Tech",
-      liveLink: "#",
+      liveLink: "https://study-notion-gamma-lovat.vercel.app/",
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const WorkSection = () => {
       tech: ["React.js", "Firebase", "Google Maps API", "Geolocation"],
       image: safePassageImg,
       githubLink: "https://github.com/JainArchit16/SafePassageMain",
-      liveLink: "https://github.com/JainArchit16/SafePassageMain",
+      liveLink: "https://safe-passage.vercel.app/",
     },
   ];
 
@@ -89,12 +89,15 @@ const WorkSection = () => {
               }`}
             >
               {/* --- IMAGE SECTION --- */}
-              <div className="w-full lg:w-3/5 group relative overflow-hidden rounded-2xl border border-gray-800 shadow-2xl">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+              <div className="w-full lg:w-3/5 aspect-video group relative overflow-hidden rounded-2xl border border-gray-800 shadow-2xl">
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+
+                {/* Image */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
               </div>
@@ -152,10 +155,12 @@ const WorkSection = () => {
                   <a
                     href={project.liveLink}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    // Kept the gradient as it stands out in both themes, but ensured text is white
-                    className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all transform hover:-translate-y-1"
+                    // specific styles for background and text color to ensure visibility
+                    className="flex items-center gap-2 transition-colors hover:opacity-80"
+                    // This ensures text is White in Dark Mode and Black in Light Mode
+                    style={{ color: "var(--important)" }}
                   >
+                    {/* <span className="font-medium">Source Code</span> */}
                     Visit Site
                   </a>
                 </div>
