@@ -46,7 +46,10 @@ const Contact = () => {
   return (
     <section className="contact">
       <div className="container">
-        <h2 className="h2" id="contact">
+        <h2
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-balance"
+          id="contact"
+        >
           Send Message
         </h2>
         <div className="contact-content">
@@ -56,13 +59,17 @@ const Contact = () => {
               Available for hire
             </strong> */}
             <p className="contact-text">
-              As a Web Developer, I construct web interfaces and design systems
-              with a special love for accessibility and the performance. I tend
-              to code things from scratch and enjoy bringing ideas to life.
+              I am a <b>Software Engineer</b> driven by the challenge of
+              building scalable, high-performance systems. My experience ranges
+              from optimizing DevOps pipelines to architecting full-stack
+              applications that support hundreds of active users.
             </p>
             <p className="contact-text">
-              I'm also an Competitive Programmer, and in my spare time, I tend
-              to learn new things.
+              With a strong foundation as a <b>Competitive Programmer</b>{" "}
+              (Leetcode Knight and Codeforces Specialist), I approach
+              development with an algorithmic mindset—prioritizing efficiency,
+              clean logic, and robust architecture in every line of code I
+              write.
             </p>
           </div>
           <form onSubmit={handleSubmit} className="contact-form">
