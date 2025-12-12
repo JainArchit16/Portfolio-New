@@ -40,7 +40,7 @@ const Footer = () => {
                   <img loading="lazy" src={githubLogo} alt="GitHub" />
                 </a>
               </li>
-              <li className="footer-link">
+              {/* <li className="footer-link">
                 <a
                   title="Codepen"
                   href="https://github.com/JainArchit16"
@@ -49,7 +49,7 @@ const Footer = () => {
                 >
                   <img loading="lazy" src={codepenLogo} alt="Codepen" />
                 </a>
-              </li>
+              </li> */}
               <li className="footer-link">
                 <a
                   title="Linkedin"

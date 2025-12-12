@@ -46,7 +46,10 @@ function WorkSection() {
   return (
     <section className="work">
       <div className="container">
-        <h2 className="h2" id="work">
+        <h2
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-balance"
+          id="work"
+        >
           Projects
         </h2>
         <div className="work-boxes">

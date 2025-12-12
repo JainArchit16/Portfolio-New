@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Typed from "typed.js";
 import Loader from "./components/Loader";
 import Intro from "./components/Intro";
+import Education from "./components/Education";
 
 export default function App() {
   const [navHidden, setNavHidden] = useState(true);
@@ -104,6 +105,8 @@ export default function App() {
 
           <main>
             <Client />
+
+            <Education />
 
             <WorkSection />
 

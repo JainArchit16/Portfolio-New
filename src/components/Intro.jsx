@@ -7,8 +7,7 @@ const Intro = () => {
       strings: [
         "Full Stack Developer",
         "Competitive Programmer",
-        "BlockChain Enthusiast",
-        "Freelancer"
+        "AI Reseacher",
       ],
       loop: true,
       typeSpeed: 100,
@@ -30,8 +29,8 @@ const Intro = () => {
           </div>
         </h1>
         <p className="header-text">
-          I’m a web developer and here is my portfolio website. Here you’ll
-          learn about me as a web developer.
+          I’m a Software Engineer passionate about building scalable web
+          applications and optimizing complex systems.
         </p>
         <div className="header-btns">
           <a href="#contact" className="btn btn-cta">
