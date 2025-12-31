@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 
 // --- IMAGES ---
-// Note: Please update these imports with the actual screenshots of your new projects!
 import gitHubIcon from "../assets/images/social-links/github.svg";
 import teachifyImg from "../assets/images/work/portfolio-template.png"; // Replaced StudyNotion
 import nptelImg from "../assets/images/work/nptel.png"; // Placeholder for Nptel Hub
 import safePassageImg from "../assets/images/work/agency-elevation.png"; // Placeholder for SafePassage
+import ipoanalyzeragentImg from "../assets/images/work/ipo-analyzer.png"; // Placeholder for SafePassage
 
 const WorkSection = () => {
   const projectRefs = useRef([]);
@@ -13,7 +13,7 @@ const WorkSection = () => {
   // --- DATA FROM RESUME ---
   const projects = [
     {
-      id: 1,
+      id: 0,
       title: "Nptel Hub",
       category: "Analytics Platform",
       description:
@@ -22,6 +22,17 @@ const WorkSection = () => {
       image: nptelImg,
       githubLink: "https://github.com/JainArchit16/Nptel-Website", // Update this
       liveLink: "https://nptelhub.vercel.app/",
+    },
+    {
+      id: 1,
+      title: "IPO Analyzer",
+      category: "Financial Analysis",
+      description:
+        "An Agentic RAG system for automated SEBI filing analysis, featuring self-correcting LangGraph workflows, persistent ChromaDB caching, and ultra-low latency Llama 3.3 inference on Groq.",
+      tech: ["LangGraph", "Groq", "LlamaParse", "ChromaDB", "Streamlit"],
+      image: ipoanalyzeragentImg,
+      githubLink: "https://github.com/SallyGrenaud/IPO_Analyzer_Agent/",
+      liveLink: "https://ipoanalyzeragent.streamlit.app/",
     },
     {
       id: 2,

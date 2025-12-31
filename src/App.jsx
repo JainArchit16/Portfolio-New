@@ -6,10 +6,10 @@ import Skills from "./components/Skills";
 // import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Typed from "typed.js";
 import Loader from "./components/Loader";
 import Intro from "./components/Intro";
 import Education from "./components/Education";
+import Snowfall from "react-snowfall";
 
 export default function App() {
   const [navHidden, setNavHidden] = useState(true);
@@ -52,7 +52,46 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  console.log(loading);
+  // 1. State for Snow settings
+  const [snowColor, setSnowColor] = useState("#ffffff");
+  const [showSnow, setShowSnow] = useState(false);
+
+  // 2. Handle "Winter Only" Logic
+  useEffect(() => {
+    const month = new Date().getMonth();
+    // Month 11 = Dec, 0 = Jan, 1 = Feb.
+    // This logic removes snow automatically when April (3) starts.
+    if (month === 11 || month <= 2) {
+      setShowSnow(true);
+    } else {
+      setShowSnow(false);
+    }
+  }, []);
+
+  // 3. Handle "Theme Color" Logic
+  useEffect(() => {
+    // Function to check CSS variables or Body class
+    const updateSnowColor = () => {
+      // Check if 'dark' class is on body, OR check localStorage directly
+      const isDark =
+        document.body.classList.contains("dark") ||
+        localStorage.getItem("theme") === "dark";
+      setSnowColor(isDark ? "#fbfbfb" : "#0c0a0a");
+    };
+
+    // Run once on load
+    updateSnowColor();
+
+    // Watch for changes to the <body> class (this detects theme toggles)
+    const observer = new MutationObserver(updateSnowColor);
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       {loading ? (
@@ -60,65 +99,83 @@ export default function App() {
           <Loader />
         </>
       ) : (
-        <div>
-          <header className="header">
-            <div className="menu-btn-container">
-              <div className="container">
-                <button type="button" className="menu-btn" onClick={toggleNav}>
-                  {navHidden ? "menu" : "close"}
-                </button>
-              </div>
-            </div>
-
-            <nav className={`nav ${navHidden ? "hidden" : ""}`}>
-              <ol className="nav-items">
-                <li className="nav-item">
-                  <a href="#" onClick={toggleNav}>
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#work" onClick={toggleNav}>
-                    My Work
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a href="#skills" onClick={toggleNav}>
-                    My Skills
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="#contact"
-                    data-focused="last-focused"
+        <>
+          {showSnow && (
+            <Snowfall
+              snowflakeCount={40}
+              color={snowColor}
+              style={{
+                position: "fixed",
+                width: "100vw",
+                height: "100vh",
+                zIndex: 9999,
+              }}
+            />
+          )}
+          <div>
+            <header className="header">
+              <div className="menu-btn-container">
+                <div className="container">
+                  <button
+                    type="button"
+                    className="menu-btn"
                     onClick={toggleNav}
                   >
-                    Contact
-                  </a>
-                </li>
-              </ol>
-            </nav>
+                    {navHidden ? "menu" : "close"}
+                  </button>
+                </div>
+              </div>
 
-            <Intro />
-          </header>
+              <nav className={`nav ${navHidden ? "hidden" : ""}`}>
+                <ol className="nav-items">
+                  <li className="nav-item">
+                    <a href="#" onClick={toggleNav}>
+                      Home
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a href="#work" onClick={toggleNav}>
+                      My Work
+                    </a>
+                  </li>
 
-          <main>
-            <Client />
+                  <li className="nav-item">
+                    <a href="#skills" onClick={toggleNav}>
+                      My Skills
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href="#contact"
+                      data-focused="last-focused"
+                      onClick={toggleNav}
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ol>
+              </nav>
 
-            <Education />
+              <Intro />
+            </header>
 
-            <WorkSection />
+            <main>
+              <Client />
 
-            <Skills />
+              <Education />
 
-            {/* <Testimonials /> */}
+              <WorkSection />
 
-            <Contact />
-          </main>
+              <Skills />
 
-          <Footer />
-        </div>
+              {/* <Testimonials /> */}
+
+              <Contact />
+            </main>
+
+            <Footer />
+          </div>
+        </>
       )}
     </>
   );
