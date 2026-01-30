@@ -10,6 +10,7 @@ import Loader from "./components/Loader";
 import Intro from "./components/Intro";
 import Education from "./components/Education";
 import Snowfall from "react-snowfall";
+import Published from "./components/Published";
 
 export default function App() {
   const [navHidden, setNavHidden] = useState(true);
@@ -165,6 +166,8 @@ export default function App() {
               <Education />
 
               <WorkSection />
+
+              <Published />
 
               <Skills />
 

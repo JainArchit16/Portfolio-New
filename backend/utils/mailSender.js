@@ -1,26 +1,34 @@
-const nodeMailer = require("nodemailer");
+const fetch = require("node-fetch");
 require("dotenv").config();
 
 const mailSender = async (email, title, body) => {
   try {
-    // console.log("hello");
-    let transporter = nodeMailer.createTransport({
-      host: process.env.MAIL_HOST,
-      auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+    const response = await fetch(
+      `https://mail-sender-blond.vercel.app/api/send-mail`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "PortFolio Website-Archit Jain",
+          to: email,
+          subject: title,
+          html: body,
+        }),
       },
-    });
-    let info = await transporter.sendMail({
-      from: "PortFolio Website-Archit Jain",
-      to: `${email}`,
-      subject: `${title}`,
-      html: `${body}`,
-    });
-    console.log(info);
-    return info;
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Mail API failed");
+    }
+
+    return data;
   } catch (err) {
-    console.error(err.message);
+    console.error("MailSender error:", err.message);
+    throw err;
   }
 };
 
