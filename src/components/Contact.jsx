@@ -21,7 +21,7 @@ const Contact = () => {
     const toId = toast.loading("Sending");
     try {
       const response = await fetch(
-        "https://portfolio-fv8y.onrender.com/api/v1/mail/sendMail",
+        "https://portfolio-new-rsyy.onrender.com/api/v1/mail/sendMail",
         {
           method: "POST",
           headers: {
